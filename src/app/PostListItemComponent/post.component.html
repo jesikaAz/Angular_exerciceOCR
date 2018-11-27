@@ -1,0 +1,14 @@
+<div class = "containerBlog" [ngClass]="{'list-group-item-success' : getColor()==='green','list-group-item-danger' :getColor()==='red'}" >
+  <div class = "containerTitre" >
+    <div class = "elementTitre"><p>{{title}}</p></div>
+    <div class = "date"><p>{{create_at|date: 'dd/MM/yyyy, h:mm a'}}</p></div>
+  </div>
+  <div class = "containerMessage">
+    <p class="content">{{content}}</p>
+  </div>
+  <div class = "containerAction">
+    <button (click)="upNote()" class = "btn btn-success" >Love it </button>
+    <button (click)="downNote()" class = "btn btn-danger" >Don't love it</button>
+  </div>
+</div>
+
